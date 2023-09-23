@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 
-
 const About = () => {
   return (
     <div className="container mx-auto">
@@ -88,7 +87,7 @@ const About = () => {
         <div className="w-full">
           <img
             src="https://images.unsplash.com/photo-1505832018823-50331d70d237?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2108&q=80"
-            className="w-11/12"
+            className="w-full"
             alt=""
           />
         </div>
@@ -139,7 +138,25 @@ const About = () => {
           </p>
         </div>
       </div>
-      
+
+      {/* for,,,,,,,,, */}
+
+      <div className=" mt-8">
+        <div className="w-full relative ">
+          <img
+            src="https://media.istockphoto.com/id/1282207898/photo/grunge-map-of-bangladesh-with-its-flag-printed-within.jpg?s=2048x2048&w=is&k=20&c=2Mc3Lou13ymT7LjJXs69U8o5wJVeqDjBq9CsqV9r5fQ="
+            className="w-full h-[400px]"
+            alt=""
+          />
+          <div className=" absolute left-40 top-24">
+             <div className="grid grid-cols-3 gap-4 justify-center text-center">
+              <h1>hhhhhhh</h1>
+              <h1>hhhhhhh</h1>
+              <h1>hhhhhhh</h1>
+             </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
