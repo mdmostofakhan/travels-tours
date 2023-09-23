@@ -1,5 +1,7 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import imagebg from '../../assets/map-pattern.png'
+import icon1 from '../../assets/icons/icon-1.png'
 
 const About = () => {
   return (
@@ -141,18 +143,30 @@ const About = () => {
 
       {/* for,,,,,,,,, */}
 
-      <div className=" mt-8">
+      <div className=" w-[60%] mx-auto  mt-8">
         <div className="w-full relative ">
-          <img
-            src="https://media.istockphoto.com/id/1282207898/photo/grunge-map-of-bangladesh-with-its-flag-printed-within.jpg?s=2048x2048&w=is&k=20&c=2Mc3Lou13ymT7LjJXs69U8o5wJVeqDjBq9CsqV9r5fQ="
-            className="w-full h-[400px]"
-            alt=""
-          />
-          <div className=" absolute left-40 top-24">
-             <div className="grid grid-cols-3 gap-4 justify-center text-center">
-              <h1>hhhhhhh</h1>
-              <h1>hhhhhhh</h1>
-              <h1>hhhhhhh</h1>
+         
+          <div className=" absolute  bg-center  w-full bg-no-repeat  h-96 top-24" style={{
+             backgroundImage:  `url(${imagebg})`
+          }}>
+             <div className="flex justify-around gap-4 ">
+               <div className="">
+                  <img className="w-[60px]" src={icon1} alt="" />
+                  <p className="mt-4 font-secondary text-2xl ">Total Travel</p>
+                  <p className="mt-4 font-secondary text-5xl ">1K+</p>
+               </div>
+               <div className="">
+                  <img className="w-[60px]" src={icon1} alt="" />
+                  <p className="mt-4 font-secondary text-2xl ">Travel Country</p>
+                  <p className="mt-4 font-secondary text-5xl ">30</p>
+               </div>
+               <div className="">
+                  <img className="w-[60px]" src={icon1} alt="" />
+                  <p className="mt-4 font-secondary text-2xl ">Five Star Rating
+</p>
+                  <p className="mt-4 font-secondary text-5xl ">20+</p>
+               </div>
+              
              </div>
           </div>
         </div>
