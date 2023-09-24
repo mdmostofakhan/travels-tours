@@ -182,7 +182,7 @@ const About = () => {
         </div>
       </div>
       <div>
-         <a href="https://youtu.be/kxPCFljwJws?si=Xq_4vUbyT4bwT_Qa"></a>
+         <img src="https://youtu.be/kxPCFljwJws?si=Xq_4vUbyT4bwT_Qa" alt="" />
       </div>
     </div>
   );
