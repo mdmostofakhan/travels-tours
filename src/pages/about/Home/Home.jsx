@@ -12,3 +12,33 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+// btn,,,,,,,,,,,,,,,,,,,,,,,,,,,,,/
+
+// .btn-animation{
+//     position: relative;
+// }
+
+// .btn-animation::before{
+//     content: '';
+//     position: absolute;
+//     transition: all 0.3s;
+   
+//     /* background-color: red; */
+//     left: 45%;
+//     width: 10%;
+//     height: 100%;
+//     bottom: 0px;
+// }
+
+// .btn-animation:hover::before {
+//     /* content: "THINGS TO DO"; */
+//     width: 100%;
+//     background-color: black;
+//     left: 0px;
+//     color: white;
+//     overflow: hidden;
+    
+// } 
