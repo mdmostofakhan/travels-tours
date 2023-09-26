@@ -1,10 +1,11 @@
 import React from "react";
 import { Icon } from "@iconify/react";
-import imagebg from '../../assets/map-pattern.png'
-import icon1 from '../../assets/icons/icon-1.png'
-import icon2 from '../../assets/icons/icon-2.png'
+import imagebg from "../../assets/map-pattern.png";
+import icon1 from "../../assets/icons/icon-1.png";
+import icon2 from "../../assets/icons/icon-2.png";
+import icon3 from "../../assets/icons/icon-3.png";
+import MainAbout from "./MainAbout";
 
-import icon3 from '../../assets/icons/icon-3.png'
 
 
 const About = () => {
@@ -117,6 +118,8 @@ const About = () => {
         </div>
       </div>
 
+      {/* for,,,,,,,,,,,,,,,,,,, */}
+
       <div className="flex flex-row-reverse gap-10 mt-20  ">
         <div className="w-full">
           <img
@@ -145,45 +148,55 @@ const About = () => {
         </div>
       </div>
 
-      {/* for,,,,,,,,, */}
-
+      {/* five,,,,,,,,, */}
       <div className=" w-[60%] mx-auto  mt-8">
-        <div className="w-full relative ">
-         
-          <div className=" absolute  bg-center  w-full bg-no-repeat  h-96 top-24" style={{
-             backgroundImage:  `url(${imagebg})`
-          }}>
-             <div className="flex justify-around gap-4 ">
-               <div className="">
-                  <img className="w-[60px]" src={icon1} alt="" />
-                  <p className="mt-4 font-secondary text-2xl ">Total Travel</p>
-                  <p className="mt-4 font-secondary text-5xl ">1K+</p>
-               </div>
-               <div className="">
-                  <img className="w-[60px]" src={icon2} alt="" />
-                  <p className="mt-4 font-secondary text-2xl ">Travel Country</p>
-                  <p className="mt-4 font-secondary text-5xl ">30</p>
-               </div>
-               <div className="">
-                  <img className="w-[70px]" src={icon3} alt="" />
-                  <p className="mt-4 font-secondary text-2xl ">Five Star Rating</p>
-                  <p className="mt-4 font-secondary text-5xl ">20+</p>
-               </div>
-              
-             </div>
-             <div className="text-center mt-6 text-xl">
-              <p>Along with 1000s of cars to choose from, you can apply for finance online and value
-                    your  <br /> existing car all from the comfort of your favourite armchair</p>
+        <div className="w-full ">
+          <div
+            className="   bg-center  w-full bg-no-repeat  h-96 top-24"
+            style={{
+              backgroundImage: `url(${imagebg})`,
+            }}
+          >
+            <div className="flex justify-around gap-4 ">
+              <div className="">
+                <img className="w-[60px]" src={icon1} alt="" />
+                <p className="mt-4 font-secondary text-2xl ">Total Travel</p>
+                <p className="mt-4 font-secondary text-5xl ">1K+</p>
+              </div>
+              <div className="">
+                <img className="w-[60px]" src={icon2} alt="" />
+                <p className="mt-4 font-secondary text-2xl ">Travel Country</p>
+                <p className="mt-4 font-secondary text-5xl ">30</p>
+              </div>
+              <div className="">
+                <img className="w-[70px]" src={icon3} alt="" />
+                <p className="mt-4 font-secondary text-2xl ">
+                  Five Star Rating
+                </p>
+                <p className="mt-4 font-secondary text-5xl ">20+</p>
+              </div>
+            </div>
+            <div className="text-center mt-6 text-xl">
+              <p>
+                Along with 1000s of cars to choose from, you can apply for
+                finance online and value your <br /> existing car all from the
+                comfort of your favourite armchair
+              </p>
             </div>
             <div className=" flex justify-center mt-6">
-            <button className=" btn-animation border text-center py-4 text-xl bg-[#C29D59]  rounded-lg text-white  px-4">THINGS TO DO</button>
+              <button className=" btn-animation border text-center py-4 text-xl bg-[#C29D59]  text-white  px-4">
+                <span className=" relative z-10">THINGS TO DO</span>
+              </button>
             </div>
+           
           </div>
         </div>
       </div>
-      <div>
-         <img src="https://youtu.be/kxPCFljwJws?si=Xq_4vUbyT4bwT_Qa" alt="" />
+             
+      <div className="mt-12">
+        <MainAbout></MainAbout>
       </div>
+       
     </div>
   );
 };
