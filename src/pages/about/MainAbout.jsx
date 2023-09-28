@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Icon } from '@iconify/react';
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,8 +11,48 @@ import "swiper/css/navigation";
 
 // import required modules
 import { FreeMode, Pagination } from "swiper/modules";
+import AboutSection from "./AboutSection";
+import TitleSection from "./TitleSection";
 
 const MainAbout = () => {
+  // const [travels, setTravels] = useState();
+   
+  const travels = [
+    {
+      id: 0,
+      title: "New Travels",
+      image: "https://gico.io/ghurbo/demos/ghurbo/images/resource/team-1.jpg",
+      jobPosition: "CTO Travel"
+    },
+    {
+      id: 1,
+      title: "New Travels",
+      image: "https://gico.io/ghurbo/demos/ghurbo/images/resource/team-2.jpg",
+      jobPosition: "CTO Travel"
+    },
+    {
+      id: 2,
+      title: "New Travels",
+      image: "https://gico.io/ghurbo/demos/ghurbo/images/resource/team-3.jpg",
+      jobPosition: "CTO Travel"
+    },
+    {
+      id: 4,
+      title: "New Travels",
+      image: "https://gico.io/ghurbo/demos/ghurbo/images/resource/team-4.jpg",
+      jobPosition: "CTO Travel"
+    },
+  ]
+
+  // useEffect(() => {
+  //   fetch("file.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setTravels(data));
+  //   console.log(travels);
+  // }, []);
+
+  
+
   return (
     <div>
       <div className="mt-10">
@@ -26,21 +67,10 @@ const MainAbout = () => {
           allowfullscreen
         ></iframe>
       </div>
-      <div className=" mt-10 flex justify-center  relative">
-        <div className=" font-bold text-[200px]">
-          <h1 className="text-[#f9f7f3]  ">TRENDING</h1>
-        </div>
-        <div className=" top-24 absolute">
-          <h1 className="text-center text-4xl italic font-bold">
-            Destinations
-          </h1>
-          <p className="text-center">
-            Lorem ipsum dolor sit amet, conseetuer adipiscing elit. Aenan comdo{" "}
-            <br />
-            igula eget. Aenean massa cum sociis Theme natoque
-          </p>
-        </div>
+      <div>
+      <TitleSection newTitle={"TRENDING"} teams={"Destinations"}/>
       </div>
+      {/* swiper,,,,,,,,,,,,,,,,,,,,,,,,, */}
 
       <div className="w-full">
         <>
@@ -55,7 +85,7 @@ const MainAbout = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Vietnam{" "}
@@ -72,7 +102,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Indonesia
@@ -89,7 +119,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Pakistan{" "}
@@ -106,7 +136,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Thailend{" "}
@@ -123,7 +153,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     vietnam{" "}
@@ -140,7 +170,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Indonesia
@@ -157,7 +187,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Pakistan
@@ -174,7 +204,7 @@ const MainAbout = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="h-[400px] relative">
+              <div className=" relative">
                 <div className="">
                   <h1 className="absolute top-32 text-5xl text-white italic right-48">
                     Thailand{" "}
@@ -194,24 +224,41 @@ const MainAbout = () => {
         </>
       </div>
 
-      <div className=" mt-10 flex justify-center  relative">
-        <div className=" font-bold text-[200px]">
-          <h1 className="text-[#f9f7f3] ">Teams</h1>
-        </div>
-        <div className=" top-24 absolute">
-          <h1 className="text-center text-4xl italic font-bold">Our Teams</h1>
-          <p className="text-center">
-            Lorem ipsum dolor sit amet, conseetuer adipiscing elit. Aenan comdo{" "}
-            <br />
-            igula eget. Aenean massa cum sociis Theme natoque
-          </p>
-        </div>
+      <TitleSection newTitle={"TRENding"} teams={"Our Teams"}/>
+
+      <div className="flex justify-center gap-5">
+        {travels?.map((travel, index) => (
+          <div 
+          key={index}
+          >
+             <img src={travel.image} alt="" />
+            <div className="text-center">
+            <p>{travel.title} </p>
+            <p>{travel.jobPosition}</p>
+             <div className="flex justify-center gap-3">
+              <p className="font-semibold from-indigo-50"> in</p>
+              <Icon className="bg-white" icon="mdi:twitter" />
+              <Icon icon="ri:google-fill" />
+              <Icon icon="ri:facebook-fill" />
+              <Icon className="text-red-600" icon="tabler:camera" />
+             </div>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <div className="flex justify-center gap-5 mt-8">
+     
+    </div>
+  );
+};
+
+export default MainAbout;
+
+/***
+ * <div className="flex justify-center gap-5 mt-8">
         <div className="relative">
                <div className="absolute hover:bg-red-400">
-               <p>Tania</p>
+               <p className="text-2xl">Tania</p>
                 <p>Cto Travel</p>
                </div>
           <img
@@ -241,9 +288,8 @@ const MainAbout = () => {
             alt=""
           />
         </div>
+      </div> 
+      <div className="mt-15">
+        <h1>neeeeeeeeeeeeeee</h1>
       </div>
-    </div>
-  );
-};
-
-export default MainAbout;
+ */

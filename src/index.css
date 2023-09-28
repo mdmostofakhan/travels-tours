@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
 .btn-animation{
     position: relative;
 }

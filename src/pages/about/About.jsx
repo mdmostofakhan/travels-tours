@@ -8,6 +8,7 @@ import MainAbout from "./MainAbout";
 
 
 
+
 const About = () => {
   return (
     <div className="container mx-auto">
@@ -196,7 +197,7 @@ const About = () => {
       <div className="mt-12">
         <MainAbout></MainAbout>
       </div>
-       
+      
     </div>
   );
 };
